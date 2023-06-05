@@ -1,33 +1,36 @@
-from datetime import datetime, date
+recipient_name = input("who is going to receive this message? ")
+sender_name = input("who is sending the message? ")
+year_of_birth = int(input("recipient's year of birth? "))
+current_year = int(input("current year? "))
+age = current_year - year_of_birth
+personalized_message = input("give your birthday wishes here: ")
 
-def calculate_age(year_of_birth):
-    year_of_birth = datetime.strptime(year_of_birth, "%Y")
-    today = date.today()
-    return today.year - year_of_birth.year - ((today.month, today.day) < (year_of_birth.month, year_of_birth.day))
-
-
-recipient_name = input("enter a recipient name: ")
-print(recipient_name)
-
-year_of_birth = input("enter year of birth: ")
-print(year_of_birth)
-
-message = input("enter a message: ")
-print(message)
-
-sender_name = input("enter sender name: ")
+print()
+print("Hi", recipient_name, ", let's celebrate your", age, "years of awesomeness!")
+print("Wishing you a day filled with joy and laughter as you turn", age, "!")
+print()
+print(personalized_message)
+print()
+print("With love and best wishes,")
 print(sender_name)
 
-age = calculate_age(year_of_birth)
 
-final_message = f"""
-{recipient_name}, let's celebrate your {age} years of awesomeness!
-Wishing you a day filled with joy and laughter as you turn {age}!
 
-{message}
 
-With love and best wishes,
-{sender_name}
-"""
 
-print(final_message)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
